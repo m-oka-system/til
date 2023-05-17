@@ -1,0 +1,31 @@
+{
+  "name": "Ubuntu",
+  "image": "mcr.microsoft.com/devcontainers/base:jammy",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/azure-cli:1": {},
+    "ghcr.io/devcontainers/features/terraform:1": {
+      "vesion": "1.4.5"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "TabNine.tabnine-vscode",
+        "esbenp.prettier-vscode",
+        "ms-vscode.live-server",
+        "ms-azuretools.vscode-docker",
+        "hashicorp.terraform"
+      ]
+    },
+    "[dockerfile]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "[terraform]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "hashicorp.terraform"
+    }
+  }
+}
