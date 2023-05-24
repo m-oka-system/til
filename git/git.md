@@ -131,6 +131,13 @@ git revert <コミットのオブジェクト名>
 git revert 98bba19
 git revert HEAD #直前のコミットを打ち消し
 
+# 複数のコミットを一つにまとめて元に戻す（OLDER_COMMIT^は打ち消すコミットの１個前->戻りたいコミットを指定）
+git revert -n OLDER_COMMIT_HASH^..NEWER_COMMIT_HASH
+git commit -m "Revert to OLDER_COMMIT_HASH"
+
+-n --no-commit コミットせずステージングする
+--no-edit      コミットメッセージを編集しない（即コミット）
+
 #　削除したコミットを復元する
 git reflog
 git reset --hard <commit>
