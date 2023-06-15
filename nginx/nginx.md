@@ -120,7 +120,7 @@ systemctl stop nginx
 # 再起動
 systemctl restart nginx
 
-# 状態を表示.......................................
+# 状態を表示
 systemctl status nginx
 
 # 設定の再読み込み
