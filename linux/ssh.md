@@ -26,4 +26,7 @@ Host github.com
 
 # 公開鍵をコピーしてGithybのSettings -> SSH and GPG keyに登録
 pbcopy < ~/.ssh/id_ed25519.pub
+
+# リモート先のサーバに公開鍵を登録
+ssh-copy-id -i ~/.ssh/id_rsa.pub azureuser@xxx.xxx.xxx.xxx
 ```
