@@ -24,7 +24,7 @@ Host github.com
   UseKeychain yes
   IdentityFile ~/.ssh/id_ed25519
 
-# 公開鍵をコピーしてGithybのSettings -> SSH and GPG keyに登録
+# 公開鍵をコピーしてGitHubのSettings -> SSH and GPG keyに登録
 pbcopy < ~/.ssh/id_ed25519.pub
 
 # リモート先のサーバに公開鍵を登録
