@@ -1,4 +1,15 @@
+# Ubuntu
+
+```bash
+# Azure VM
+sudo snap install docker
+sudo addgroup docker
+sudo adduser azureuser docker
+sudo reboot
+```
+
 # Amazon Linux
+
 ```bash
 # docker
 sudo yum install -y docker
@@ -16,14 +27,18 @@ docker-compose --version
 ```
 
 # Linter / Formatter
+
 ## Linter (hadlint)
-1. GitHubからhadolint-Windows-x86_64.exeをダウンロード
-1. hadolint.exeにリネームしてPATHの通っている場所に配置（または、PATHを追加）
-1. VSCodeの拡張機能「hadolint」をインストール
+
+1. GitHub から hadolint-Windows-x86_64.exe をダウンロード
+1. hadolint.exe にリネームして PATH の通っている場所に配置（または、PATH を追加）
+1. VSCode の拡張機能「hadolint」をインストール
 
 ## Formater
-1. VSCodeの拡張機能「Docker」をインストール
-1. settings.jsonに以下を追記して保存時のフォーマットを有効化
+
+1. VSCode の拡張機能「Docker」をインストール
+1. settings.json に以下を追記して保存時のフォーマットを有効化
+
 ```json
     "[dockerfile]": {
         "editor.formatOnSave": true,
