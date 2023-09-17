@@ -1,0 +1,20 @@
+###
+GET https://<endpoint> HTTP/1.1
+
+###
+POST https://<endpoint>> HTTP/1.1
+content-type: application/json
+
+{
+    "text": "Hello, world."
+}
+
+###
+POST /{tenant}/oauth2/v2.0/token HTTP/1.1
+Host: login.microsoftonline.com
+Content-Type: application/x-www-form-urlencoded
+
+client_id=535fb089-9ff3-47b6-9bfb-4f1264799865
+&scope=https%3A%2F%2Fgraph.microsoft.com%2F.default
+&client_secret=sampleCredentia1s
+&grant_type=client_credentials
