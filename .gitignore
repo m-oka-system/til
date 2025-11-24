@@ -1,2 +1,46 @@
-# SpecStory explanation file
-.specstory/**
+# OSごとの不要ファイル
+.DS_Store
+Thumbs.db
+
+# パッケージマネージャ
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# バージョン管理
+*.orig
+
+# ログファイル
+*.log
+
+# 環境設定
+.env
+.env.*
+
+# IDEやエディタ
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Mac
+.AppleDouble
+.LSOverride
+
+# その他一般的な除外
+*.swp
+*.tmp
+*.bak
+*.backup
+*~
