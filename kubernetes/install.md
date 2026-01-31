@@ -99,7 +99,12 @@ stern --version
 alias k='kubectl'
 alias ka='kubectl apply'
 alias kd='kubectl delete'
+alias kdp='kubectl describe pod'
+alias kds='kubectl describe service'
+alias kdc='kubectl describe configmap'
 alias kpf='kubectl port-forward'
+alias kcg='kubectl config get-contexts'
 alias kc='kubectx | peco | xargs kubectx'
 alias kn='kubens | peco | xargs kubens'
+alias st='stern'
 ```
