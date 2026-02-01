@@ -7,6 +7,7 @@
 | helm      | Kubernetes 用のパッケージマネージャー。複雑なマニフェストをテンプレート化し、再利用性とバージョン管理を高めるために使う。                         |
 | kubectx   | kubectl の context や namespace をコマンド一発で切り替える補助ツール。入力ミスによる誤操作を防ぎ、操作対象を素早く変えるために使う。              |
 | stern     | 複数 Pod のログを同時に追跡し、色分けで見やすくするログビューア。リアルタイムでの障害調査やデバッグをシンプルにするために使う。                   |
+| kubecolor | kubectl の出力を色分けして見やすくするツール。kubectl の出力をより読みやすくするために使う。                                                   |
 
 ## OrbStack
 
@@ -92,19 +93,34 @@ brew install stern
 stern --version
 ```
 
+## kubecolor
+
+```bash
+# インストール
+brew install hidetatz/tap/kubecolor
+kubecolor version
+```
+
 ## Alias
 
 ```bash
 # kubernetes
-alias k='kubectl'
+alias k='kubecolor'
 alias ka='kubectl apply'
 alias kd='kubectl delete'
 alias kdp='kubectl describe pod'
 alias kds='kubectl describe service'
 alias kdc='kubectl describe configmap'
+alias kdi='kubectl describe ingress'
 alias kpf='kubectl port-forward'
 alias kcg='kubectl config get-contexts'
 alias kc='kubectx | peco | xargs kubectx'
 alias kn='kubens | peco | xargs kubens'
 alias st='stern'
+
+# get zsh complete kubectl
+source <(kubectl completion zsh)
+alias kubectl=kubecolor
+# make completion work with kubecolor
+compdef kubecolor=kubectl
 ```
