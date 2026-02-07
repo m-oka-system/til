@@ -81,7 +81,7 @@ graph TB
 
 ### 重要: 日本リージョンでの制約
 
-**Application Gateway for Containers (AGC) は日本リージョン非対応**です（2025年5月時点）。
+**Application Gateway for Containers (AGC) は日本リージョン非対応**です（2025 年 5 月時点）。
 
 サポートリージョン:
 
@@ -168,7 +168,7 @@ graph LR
 **デメリット**:
 
 - **日本リージョン非対応**
-- 比較的新しいサービス（2024年GA）
+- 比較的新しいサービス（2024 年 GA）
 - 従量課金でコストがかかる
 
 ### 3. Application Gateway Ingress Controller (AGIC)
@@ -371,7 +371,7 @@ spec:
 
 ### 2. Application Gateway Ingress Controller (AGIC)
 
-**方法1: AKS アドオンとして有効化（推奨）**
+**方法 1: AKS アドオンとして有効化（推奨）**
 
 ```bash
 # Application Gateway の作成
@@ -395,7 +395,7 @@ az aks enable-addons \
     --query id -o tsv)
 ```
 
-**方法2: Helm でインストール**
+**方法 2: Helm でインストール**
 
 ```bash
 # Helm repo 追加
